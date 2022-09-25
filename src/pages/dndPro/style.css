@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Vibur&display=swap");
+
+:root {
+  --grid: 8px;
+  --pink: #fd3afd;
+  --pinkDark: #690169;
+  --greyLight: #515b7d;
+  --black: #1d212e;
+  --borderWidth: 4px;
+  --borderRadius: 8px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.fatherE {
+  width: 220px;
+  height: 800px;
+  overflow: hidden;
+  background-color: #bfcbda;
+}
+.dnd-pro {
+  /* display: flex; */
+  width: 220px;
+  background-color: pink;
+  /* flex-direction: row; */
+  /* align-items: center; */
+  /* user-select: none; */
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* 整个模块包括方案 */
+.column {
+  margin: calc(var(--grid) / 2);
+  border-radius: var(--borderRadius);
+  background-color: white;
+  width: 216;
+}
+
+.column-title {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 900;
+  background-color: white;
+  margin: 0;
+}
+
+.column-title:hover {
+  background-color: #9db4d1;
+}
+
+.task-list {
+  padding-left: var(--grid);
+  padding-right: var(--grid);
+  scrollbar-color: dark;
+}
+
+.actBtn {
+  float: right;
+  line-height: 52px;
+  font-size: 18px !important;
+}
+
+.item {
+  background: white;
+  border: 2px solid rgb(25, 73, 177);
+  box-sizing: border-box;
+  padding: 8px;
+  color: black;
+  font-size: 18px;
+  user-select: none;
+  text-align: center;
+}
+
+.item.is-dragging {
+  background: #2b729b;
+  border-color: #2d39dd;
+}
+
+.itemName {
+  font-size: 25px;
+  line-height: 52px;
+}

@@ -1,5 +1,6 @@
 import { Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
+import DndPro from './dndPro';
 import React from 'react';
 
 interface DataType {
@@ -42,11 +43,7 @@ const columns: ColumnsType<DataType> = [
   {
     title: 'BMI',
     // BMI=体重÷身高2
-    render: (text) => (
-      <span>
-        {}
-      </span>
-    ),
+    render: (text) => <span>{}</span>,
   },
 ];
 
@@ -67,6 +64,11 @@ const data: DataType[] = [
   },
 ];
 
-const App: React.FC = () => <Table columns={columns} dataSource={data} />;
+const App: React.FC = () => (
+  <>
+    {/* <Table columns={columns} dataSource={data} /> */}
+    <DndPro />
+  </>
+);
 
 export default App;
